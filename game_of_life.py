@@ -1,3 +1,11 @@
+'''
+Simuation of how bacteria may develop on a 2 dimensional grid.
+Each point that has exactly two adjacent bacteria will develop a bacteria in the next time step.
+Other points, will be bacteria free in the following time step
+
+PRESS SPACE BAR to move onto the next time step.
+'''
+
 import numpy as np
 import pygame
 from pygame.locals import K_UP, K_DOWN, K_LEFT, K_RIGHT, QUIT, KEYDOWN, K_ESCAPE, RLEACCEL, K_SPACE
@@ -97,7 +105,6 @@ def zaladuj(plik, n, m):
 	
 if __name__ == '__main__':
 	Mapa = zaladuj(plik, n, m)
-	#print(Mapa.tablica)
 	Mapa.drukuj()
 
 	running = True
